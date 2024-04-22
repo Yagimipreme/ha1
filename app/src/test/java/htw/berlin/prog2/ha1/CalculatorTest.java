@@ -105,7 +105,25 @@ class CalculatorTest {
 
         assertEquals(expected,actual);
     }
+    //TODO hier rote tests erstellen
+    @Test
+    @DisplayName("Should respect punkt vor strich")
+    void shshshsh(){
+        Calculator calc = new Calculator();
 
+        calc.pressDigitKey(4);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(1);
+        calc.pressBinaryOperationKey("x");
+        calc.pressDigitKey(5);
+        calc.pressEqualsKey();
+
+        String expected = "9";
+        String actual = calc.readScreen();
+
+        assertEquals(expected,actual);
+
+    }
 
 }
 
